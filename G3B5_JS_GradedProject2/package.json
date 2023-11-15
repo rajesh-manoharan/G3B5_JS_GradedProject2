@@ -1,0 +1,17 @@
+{
+  "name": "javascript-group-assignment",
+  "version": "1.0.0",
+  "main": "Data.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -a localhost -p 8000"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
