@@ -1,6 +1,6 @@
 import { UserInformationManager } from "./usermanagement.js";
 
-let userInformationManager = new UserInformationManager("dipanjan", 'Dip@12345');
+let userInformationManager = new UserInformationManager("G3B5", 'G3B5');
 userInformationManager.initializeUserInformation();
 
 
@@ -14,11 +14,6 @@ var showErrorMessage = () => {
 }
 
 class LoginController {
-
-    constructor() {
-
-    }
-
     initializeEventListener() {
         document.getElementById("login-form").addEventListener("submit", function(event) {
             event.preventDefault();
@@ -32,7 +27,6 @@ class LoginController {
                 showErrorMessage();
             }
         });
-        console.log("LoginController has been initialized.");
     }
 }
 
