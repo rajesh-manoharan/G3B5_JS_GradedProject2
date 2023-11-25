@@ -1,0 +1,81 @@
+#search-area {
+    display: inline;
+    justify-content: space-evenly;
+}
+
+#basics {
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+#prevBtn,
+#nextBtn,
+#resetBtn {
+    padding: 15px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #829ff6;
+    box-shadow: 0 9px #999;
+    border-radius: 15px;
+}
+
+#prevBtn:hover,
+#nextBtn:hover,
+#resetBtn:hover {
+    background-color: #4f64ac
+}
+
+#prevBtn:active,
+#nextBtn:active,
+#resetBtn:active {
+    background-color: #4f64ac;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#searchbox {
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    box-shadow: 2px 2px;
+}
+
+#header-area {
+    padding: 5px 10px;
+    text-align: center;
+    background-color: peachpuff;
+    margin: 15px 0px 0px 0px;
+    border: 3px solid black;
+    box-shadow: 5px 5px gray;
+}
+
+#errorarea {
+    padding: 5px 10px;
+    background-color: rgb(223, 117, 117);
+    margin: 15px 0px 0px 0px;
+    border: 3px solid black;
+    box-shadow: 5px 5px gray;
+    height: 30vh;
+}
+
+#errormsg {
+    text-align: center;
+    color: beige;
+    padding: 10vh;
+    font-size: x-large;
+}
+
+#workdetails {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 15px 25px;
+}
+
+#personaldetails {
+    float: left;
+    padding: 10px;
+    margin: 15px 25px;
+    background-color: lightsalmon;
+}

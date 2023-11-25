@@ -3,53 +3,44 @@ import { resumeItem } from "../../resume-item/model/resume-item.js";
 import { JobCategory } from "./job-category.js";
 
 class JobCategoryUtils {
+  static getAllJobItems(jobCategory) {
+    const resumeJSONinner = resumeJson.resume;
 
-    static getAllJobItems(jobCategory) {
+    const allJobItems = new Array();
 
-        const resumeJSONinner = resumeJson.resume;
+    resumeJSONinner.forEach((jobItemSampleData) => {
+      const {
+        basics: { AppliedFor },
+      } = jobItemSampleData;
 
-        const allJobItems = new Array();
+      if (jobCategory.category === AppliedFor) {
+        const resumeItemObj = new resumeItem(
+          jobItemSampleData.id,
+          jobItemSampleData.basics,
+          jobItemSampleData.personal,
+          jobItemSampleData.skills,
+          jobItemSampleData.work,
+          jobItemSampleData.Internship,
+          jobItemSampleData.projects,
+          jobItemSampleData.education,
+          jobItemSampleData.achievements,
+          jobItemSampleData.interests
+        );
+        allJobItems.push(resumeItemObj);
+      }
+    });
 
-        resumeJSONinner.forEach((jobItemSampleData) => {
-            const {basics:{AppliedFor}} = jobItemSampleData;
+    return allJobItems;
+  }
 
-            if ( jobCategory.category === AppliedFor) {
+  static getAllJobCategories() {
+    const allJobCategories = new Array();
 
-                const resumeItemObj = new resumeItem(
-                    jobItemSampleData.id,
-                    jobItemSampleData.basics,
-                    jobItemSampleData.personal,
-                    jobItemSampleData.skills,
-                    jobItemSampleData.work,
-                    jobItemSampleData.Internship,
-                    jobItemSampleData.projects,
-                    jobItemSampleData.education,
-                    jobItemSampleData.achievements,
-                    jobItemSampleData.interests   
-                );
-                allJobItems.push(resumeItemObj);
-
-            }
-        })
-
-        return allJobItems;
-    }
-
-    static getAllJobCategories() {
-
-        const allJobCategories = new Array();
-
-        allJobCategories.push(
-            new JobCategory("Software Engineer")
-        )
-        allJobCategories.push(
-            new JobCategory("Manager")
-        )
-        allJobCategories.push(
-            new JobCategory("HR")
-        )
-        return allJobCategories;
-    }
+    allJobCategories.push(new JobCategory("Software Engineer"));
+    allJobCategories.push(new JobCategory("Manager"));
+    allJobCategories.push(new JobCategory("HR"));
+    return allJobCategories;
+  }
 }
 
 export { JobCategoryUtils };

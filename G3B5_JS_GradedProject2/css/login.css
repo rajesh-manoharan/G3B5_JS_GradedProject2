@@ -7,7 +7,7 @@
      height: 100vh;
      margin: 0;
  }
- 
+
  .login-container {
      max-width: 400px;
      height: 220px;
@@ -17,12 +17,12 @@
      box-shadow: 0 0 10px rgb(0, 0, 0);
      text-align: center;
  }
- 
+
  #login-form {
      padding: 30px;
      justify-content: center;
  }
- 
+
  input[type="text"],
  input[type="password"] {
      width: 95%;
@@ -33,7 +33,7 @@
      border-radius: 3px;
      font-size: 20px;
  }
- 
+
  button {
      padding: 3px;
      background-color: #9ac72a;
@@ -46,7 +46,7 @@
      font-weight: bold;
      font-size: 20px;
  }
- 
+
  #error-msg {
      font-weight: bold;
      color: red;
